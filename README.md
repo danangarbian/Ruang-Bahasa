@@ -49,7 +49,8 @@ The following block diagram illustrates the 5 core swimlanes of Ruang Bahasa, sp
 ## 3. Core Architectural Invariants (Non-Negotiable)
 
 1. **Human Editorial Supremacy**: No raw LLM generation is ever promoted directly to the public knowledge base or exported as an official classroom resource without verified human approval.
-2. **Strict Dual-Key Approval (Four-Eyes Principle)**: A user cannot approve their own submission (eviewer_id != submitter_id).
+2. **Strict Dual-Key Approval (Four-Eyes Principle)**: A user cannot approve their own submission (
+eviewer_id != submitter_id).
 3. **Immutable Content Hash Validation**: Approved items store content_hash = sha256(text + metadata). Modifying any field invalidates the verification state.
 4. **Zero-Contamination Benchmark Isolation**: Sentences marked as TEST split are excluded from prompt retrieval, RAG injection, and knowledge release datasets.
 5. **Community Data Sovereignty**: By default, llow_training = False. Datasets released to the public require explicit community elders/teachers authorization.
@@ -71,11 +72,25 @@ Ruang Bahasa is not a hypothetical proposal; it builds upon over 7 years of empi
    Hosted on the **Mozilla Data Collective**: [https://mozilladatacollective.com/datasets/cmpcp7cl800ydmg077wte52mv](https://mozilladatacollective.com/datasets/cmpcp7cl800ydmg077wte52mv)
 
 ### Selected Peer-Reviewed Publications:
-- **Sulistyo, D. A.**, et al. (2023). *A low-resource language dataset for Madurese with entity annotations and benchmark evaluations*. **PeerJ Computer Science**, 9:e1628. [DOI: 10.7717/peerj-cs.1628](https://doi.org/10.7717/peerj-cs.1628) (Scopus Q2).
-- **Sulistyo, D. A.**, et al. (2020). *Part-of-speech tagging for Madurese language using Hidden Markov Model and rule-based post-processing*. **Telkomnika**, 18(6), 2910–2918. [DOI: 10.12928/telkomnika.v18i6.14815](https://doi.org/10.12928/telkomnika.v18i6.14815) (Scopus Q3).
-- **Sulistyo, D. A.**, et al. (2020). *Named entity recognition in Indonesian cultural domain texts*. **International Journal of Advances in Intelligent Informatics (IJAIN)**, 6(3), 285–296. (Scopus Q3).
-- **Sulistyo, D. A.**, & Winarko, E. (2020). *Named entity recognition on Indonesian text using bidirectional LSTM*. **IJCCS (Indonesian Journal of Computing and Cybernetics Systems)**, 14(4), 407–418.
-- **Sulistyo, D. A.**, & Purnomo, D. (2021). *Text classification for regional Indonesian folk literature*. **SinkrOn: Jurnal dan Penelitian Teknik Informatika**, 6(1), 112–120.
+1. Suryanto, T. L. M., Wahuni, E. D., Saídiyah, I., Wibawa, A. P., & Sulistyo, D. A. (2026). Transforming sports knowledge: Chatbot AI-based systems for improved training and education in sports.. *Journal of Physical Education & Sport 26 (1), 2026*. https://scholar.google.com/citations?view_op=view_citation&hl=id&user=Y3TMwyUAAAAJ&pagesize=100&citation_for_view=Y3TMwyUAAAAJ:mvPsJ3kp5DgC
+2. M, F. & Sulistyo, D. A. (2026). Pemanfaatan NLP Untuk Ekstrasi Profil Kompetensi Dari Portofolio Digital Sebagai Dasar Sistem Rekomendasi. *Bulletin of Data Science 5 (3), 295-303, 2026*. https://doi.org/10.47065/bulletinds.v5i3.10251
+3. Tampubolon, S. V. & Sulistyo, D. A. (2026). Analisis Sentimen Ulasan Game Stardew Valley pada Steam dan Google Play. *JURNAL FASILKOM 16 (1), 57-67, 2026*. https://doi.org/10.37859/jf.v16i1.11217
+4. Ahda, F. A., Wibawa, A. P., Prasetya, D. D., Sulistyo, D. A., & Nafalski, A. (2026). Advanced Machine Translation-Based Stammer for Preserving the Minangkabau Traditional Medicine Domain. *JOIV: International Journal on Informatics Visualization 10 (3), 959-969, 2026*. https://doi.org/10.62527/joiv.10.3.4042
+5. Sulistyo, D. A., Prasetya, D. D., Ahda, F. A., & Wibawa, A. P. (2025). Pivoted low resource multilingual translation with NER optimization. *ACM Transactions on Asian and Low-Resource Language Information Processing*. https://doi.org/10.1145/3727876
+6. Sulistyo, D. A., Wibawa, A. P., Prasetya, D. D., Ahda, F. A., & Astawa, I. (2025). Multilingual Parallel Corpus for Indonesian Low-Resource Languages. *JOIV: International Journal on Informatics Visualization 9 (5), 2176-2182, 2025*. https://doi.org/10.62527/joiv.9.5.3412
+7. Ahda, F. A., Wibawa, A. P., Prasetya, D. D., Sulistyo, D. A., & Nafalski, A. (2025). Minangkabau language stemming: A new approach with modified enhanced confix stripping. *Jurnal RESTI (Rekayasa Sistem dan Teknologi Informasi) 9 (3), 677-687, 2025*. https://doi.org/10.29207/resti.v9i3.6511
+8. Sulistyo, D. A., Wibawa, A. P., Prasetya, D. D., & Ahda, F. A. (2025). Indonesian cross-linguistic named entity recognition. *Research Methods in Applied Linguistics 4 (3), 100236, 2025*. https://doi.org/10.1016/j.rmal.2025.100236
+9. Mahendra, K. D. & Sulistyo, D. A. (2025). Improving SpaCy-based NER Accuracy using Conditional Random Fields (CRF) as Advanced Features for Javanese Legends. *ICoBITS 1, 508-516, 2025*. https://doi.org/10.32664/icobits.v1.57
+10. Sulistyo, D. A., Wibawa, A. P., Mahmudy, W. F., Ahda, F. A., & Nafalski, A. (2025). Empowering Low-Resource Languages: Javanese Machine Translation. *RESTI (Rekayasa Sistem dan Teknologi Informasi) 9 (5), 1210-1221, 2025*. https://doi.org/10.29207/resti.v9i5.6887
+11. Fahrudillah, M. F. & Sulistyo, D. A. (2025). Analisis Sentimen Ulasan Pemain Genshin Impact Menggunakan Kombinasi TF-IDF, Lexicon, dan Support Vector Machine. *JURNAL FASILKOM 15 (3), 580-593, 2025*. https://doi.org/10.37859/jf.v15i3.10553
+12. Setiadi, E. & Sulistyo, D. A. (2025). Analisis Sentimen Kebijakan Makan Bergizi Gratis Menggunakan IndoBERT dan Machine Learning. *JURNAL FASILKOM 15 (3), 507-513, 2025*. https://doi.org/10.37859/jf.v15i3.10546
+13. Sulistyo, D. A., Wibawa, A. P., Prasetya, D. D., & Ahda, F. A. (2025). An enhanced pivot-based neural machine translation for low-resource languages.. *International Journal of Advances in Intelligent Informatics 11 (2), 258, 2025*. https://doi.org/10.26555/ijain.v11i2.2115
+14. Sulistyo, D. A., Wibawa, A. P., Prasetya, D. D., Ahda, F. A., & Utama, A. B. P. (2025). A Comparative Study of Machine Learning Models for Javanese Wuku Classification: Exploring SVM, Naïve Bayes, and CNN for Cultural Texts. *Knowledge Engineering and Data Science 8 (1), 104-117, 2025*. https://doi.org/10.17977/um018v8i12025p104-117
+15. Ashari, M., Sulistyo, D. A., & Ahda, F. A. (2024). Stemming in Madurese language using Nazief and Adriani algorithm. *Jurnal Teknik Informatika (Jutif) 5 (4), 695-702, 2024*. https://doi.org/10.52436/1.jutif.2024.5.4.2012
+16. Ahda, F. A., Wibawa, A. P., Prasetya, D. D., & Sulistyo, D. A. (2024). Comparison of Adam optimization and RMS prop in Minangkabau-Indonesian bidirectional translation with neural machine translation. *JOIV: International Journal on Informatics Visualization 8 (1), 231-238, 2024*. https://doi.org/10.62527/joiv.8.1.1818
+17. Sulistyo, D. A., Wibawa, A. P., Prasetya, D. D., & Ahda, F. A. (2023). LSTM-based machine translation for Madurese-Indonesian. *Journal of Applied Data Sciences 4 (3), 189-199, 2023*. https://doi.org/10.47738/jads.v4i3.113
+18. Sulistyo, D. A., Wibawa, A. P., Prasetya, D. D., & Nafalski, A. (2023). Autogenerated Indonesian-Madurese parallel corpus dataset using neural machine translation. *Data in Brief (Elsevier) / SSRN*. https://doi.org/10.1016/j.dib.2025.112046
+19. Sulistyo, D., Ahda, F., & Fitria, V. A. (2021). Epistomologi dalam Natural Language Processing. *Jurnal Inovasi Teknologi dan Edukasi Teknik 1 (9), 652-664, 2021*. https://doi.org/10.17977/um068v1i92021p652-664
 
 ---
 
