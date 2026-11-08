@@ -32,7 +32,7 @@ The following block diagram illustrates the 5 core swimlanes of Ruang Bahasa, sp
 
 ![Ruang Bahasa Architecture](assets/Ruang_Bahasa_EN_300dpi.png)
 
-*(For Indonesian version, see [Ruang_Bahasa_ID]([assets/Ruang_Bahasa_ID_300dpi.png]))*
+*(For Indonesian version, see [Ruang_Bahasa_ID](assets/Ruang_Bahasa_ID_300dpi.png))*
 
 ### Architectural Swimlanes:
 
