@@ -30,9 +30,9 @@ Ruang Bahasa solves this through an **asymmetric, community-governed architectur
 
 The following block diagram illustrates the 5 core swimlanes of Ruang Bahasa, spanning input consent, sovereign generation, human editorial review, knowledge governance release, and classroom export.
 
-![Ruang Bahasa Architecture](assets/ruang_bahasa_architecture_diagram.png)
+![Ruang Bahasa Architecture]([assets/ruang_bahasa_architecture_diagram.png](https://github.com/danangarbian/Ruang-Bahasa/blob/main/assets/Ruang_Bahasa_EN_300dpi.png))
 
-*(For Indonesian version, see [assets/blok_diagram_ruang_bahasa_id.png](assets/blok_diagram_ruang_bahasa_id.png))*
+*(For Indonesian version, see [Ruang_Bahasa_ID]([assets/blok_diagram_ruang_bahasa_id.png](https://github.com/danangarbian/Ruang-Bahasa/blob/main/assets/Ruang_Bahasa_ID_300dpi.png)))*
 
 ### Architectural Swimlanes:
 
