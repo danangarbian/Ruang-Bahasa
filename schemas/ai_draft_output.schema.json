@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/danang-arbian/ruang-bahasa/main/schemas/ai_draft_output.schema.json",
+  "title": "RuangBahasaAiDraftOutput",
+  "description": "Output schema contract enforced server-side for AI providers generating regional language educational drafts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "language_code",
+    "variety_label",
+    "title",
+    "segments",
+    "vocabulary",
+    "exercises",
+    "review_notes"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": [
+        "1.0"
+      ]
+    },
+    "language_code": {
+      "type": "string",
+      "enum": [
+        "mad",
+        "jav",
+        "min"
+      ],
+      "description": "ISO 639-3 code for target regional language (Madurese, Javanese, Minangkabau)."
+    },
+    "variety_label": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 100,
+      "description": "Specific dialect variety or social register (e.g., Madura Timur / Sumenep, Jawa Ngoko, Jawa Krama Alus)."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 200,
+      "description": "Draft lesson title in the target regional language."
+    },
+    "segments": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "segment_id",
+          "source_segment_id",
+          "target_text",
+          "reference_ids",
+          "needs_review"
+        ],
+        "properties": {
+          "segment_id": {
+            "type": "string",
+            "pattern": "^s[0-9]+$"
+          },
+          "source_segment_id": {
+            "type": "string",
+            "pattern": "^src[0-9]+$"
+          },
+          "target_text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reference_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Must strictly reference pre-injected curated glossary item IDs."
+          },
+          "needs_review": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "vocabulary": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_term",
+          "target_term",
+          "meaning_id",
+          "segment_id"
+        ],
+        "properties": {
+          "source_term": {
+            "type": "string"
+          },
+          "target_term": {
+            "type": "string"
+          },
+          "meaning_id": {
+            "type": "string"
+          },
+          "segment_id": {
+            "type": "string",
+            "pattern": "^s[0-9]+$"
+          }
+        }
+      }
+    },
+    "exercises": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 15,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "question_id",
+          "type",
+          "question",
+          "answer",
+          "evidence_segment_ids"
+        ],
+        "properties": {
+          "question_id": {
+            "type": "string",
+            "pattern": "^q[0-9]+$"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "short_answer",
+              "multiple_choice",
+              "fill_blank"
+            ]
+          },
+          "question": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          },
+          "evidence_segment_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^s[0-9]+$"
+            }
+          }
+        }
+      }
+    },
+    "review_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

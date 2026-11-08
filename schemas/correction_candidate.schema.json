@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/danang-arbian/ruang-bahasa/main/schemas/correction_candidate.schema.json",
+  "title": "RuangBahasaCorrectionCandidate",
+  "description": "Schema for proposing human corrections to AI drafts for community curation and reuse.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "candidate_id",
+    "source_revision_id",
+    "language_code",
+    "variety_label",
+    "source_segment_id",
+    "text_before",
+    "text_after",
+    "correction_type",
+    "pedagogical_reason",
+    "proposed_by",
+    "reuse_consent"
+  ],
+  "properties": {
+    "candidate_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "source_revision_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "language_code": {
+      "type": "string",
+      "enum": [
+        "mad",
+        "jav",
+        "min"
+      ]
+    },
+    "variety_label": {
+      "type": "string"
+    },
+    "source_segment_id": {
+      "type": "string"
+    },
+    "text_before": {
+      "type": "string",
+      "description": "Original model output before human correction."
+    },
+    "text_after": {
+      "type": "string",
+      "description": "Corrected text authored by native educator."
+    },
+    "correction_type": {
+      "type": "string",
+      "enum": [
+        "LEXICAL_ACCURACY",
+        "REGISTER_HONORIFIC",
+        "CULTURAL_TERM",
+        "GRAMMATICAL_SYNTAX",
+        "PEDAGOGICAL_CLARITY"
+      ]
+    },
+    "pedagogical_reason": {
+      "type": "string"
+    },
+    "proposed_by": {
+      "type": "string"
+    },
+    "reuse_consent": {
+      "type": "object",
+      "required": [
+        "allow_internal_reuse",
+        "allow_public_release",
+        "allow_training"
+      ],
+      "properties": {
+        "allow_internal_reuse": {
+          "type": "boolean"
+        },
+        "allow_public_release": {
+          "type": "boolean"
+        },
+        "allow_training": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

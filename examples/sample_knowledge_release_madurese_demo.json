@@ -1,0 +1,37 @@
+{
+  "release_id": "7f9a2b10-6c3e-4d5a-8b1e-0f9e8d7c6b5a",
+  "version": "v1.0",
+  "language_code": "mad",
+  "variety_label": "Madura Timur (Sumenep)",
+  "manifest_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "published_at": "2026-11-08T00:00:00Z",
+  "published_by": "Majelis Kurator Bahasa Madura (Komunitas Pendidik Jawa Timur)",
+  "license": "CC-BY-4.0",
+  "notice": "SIMULATION_SPEC_EXAMPLE - Exemplar community knowledge release snapshot.",
+  "items": [
+    {
+      "item_id": "mad-rel-001",
+      "kind": "TERM",
+      "source_term": "pasar tradisional",
+      "target_term": "papekan",
+      "context_sentence": "Ibu tindak dhateng peken (ID: Ibu pergi ke pasar tradisional).",
+      "provenance_candidate_id": "11111111-2222-3333-4444-555555555555"
+    },
+    {
+      "item_id": "mad-rel-002",
+      "kind": "TERM",
+      "source_term": "raja yang bijaksana",
+      "target_term": "rato se bicaksani",
+      "context_sentence": "Pangeran Trunojoyo paneka rato se bicaksani ban bangal.",
+      "provenance_candidate_id": "22222222-3333-4444-5555-666666666666"
+    },
+    {
+      "item_id": "mad-rel-003",
+      "kind": "EXAMPLE",
+      "source_term": "membaca buku",
+      "target_term": "maos ketab",
+      "context_sentence": "Rombongan santre seddheng maos ketab e langgar.",
+      "provenance_candidate_id": "33333333-4444-5555-6666-777777777777"
+    }
+  ]
+}

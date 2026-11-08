@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/danang-arbian/ruang-bahasa/main/schemas/knowledge_release.schema.json",
+  "title": "RuangBahasaKnowledgeRelease",
+  "description": "Schema for immutable, versioned community knowledge releases exported as public goods.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "release_id",
+    "version",
+    "language_code",
+    "variety_label",
+    "manifest_hash",
+    "published_at",
+    "published_by",
+    "license",
+    "items"
+  ],
+  "properties": {
+    "release_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^v[0-9]+\\.[0-9]+$"
+    },
+    "language_code": {
+      "type": "string",
+      "enum": [
+        "mad",
+        "jav",
+        "min"
+      ]
+    },
+    "variety_label": {
+      "type": "string"
+    },
+    "manifest_hash": {
+      "type": "string",
+      "description": "SHA-256 hash of entire item manifest."
+    },
+    "published_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "published_by": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string",
+      "enum": [
+        "CC-BY-4.0",
+        "CC-BY-SA-4.0",
+        "CC0-1.0"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "item_id",
+          "kind",
+          "source_term",
+          "target_term",
+          "context_sentence",
+          "provenance_candidate_id"
+        ],
+        "properties": {
+          "item_id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "TERM",
+              "EXAMPLE"
+            ]
+          },
+          "source_term": {
+            "type": "string"
+          },
+          "target_term": {
+            "type": "string"
+          },
+          "context_sentence": {
+            "type": "string"
+          },
+          "provenance_candidate_id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      }
+    }
+  }
+}
