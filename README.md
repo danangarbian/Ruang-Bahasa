@@ -150,4 +150,4 @@ Copyright (c) 2026 Dr. Danang Arbian Sulistyo.
 
 For collaborations, academic inquiries, or Mozilla Fellowship correspondences:  
 **Dr. Danang Arbian Sulistyo, S.Kom., M.Kom.**  
-Email: danang@asia.ac.id | Malang, East Java, Indonesia
+Email: danangarbian@gmail.com, danang.arbian@asia.ac.id| Malang, East Java, Indonesia
