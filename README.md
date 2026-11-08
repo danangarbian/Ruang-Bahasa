@@ -96,14 +96,15 @@ Ruang Bahasa is not a hypothetical proposal; it builds upon over 7 years of empi
 
 ## 5. Repository Structure
 
-`	ext
+```text
 ruang-bahasa/
 ├── README.md                                  # English & Indonesian architecture manifest
+├── PUBLICATIONS.md                            # Complete 19-Paper NLP & Computational Linguistics Catalog (2020–2026)
 ├── LICENSE                                    # Apache 2.0 Open Source License
 ├── .gitignore                                 # Standard Python, Django & environment gitignore
 ├── assets/
-│   ├── ruang_bahasa_architecture_diagram.png  # English 300 DPI Block Diagram
-│   └── blok_diagram_ruang_bahasa_id.png       # Indonesian 300 DPI Block Diagram
+│   ├── Ruang_Bahasa_EN_300dpi.png  # English 300 DPI Block Diagram
+│   └── Ruang_Bahasa_ID_300dpi.png       # Indonesian 300 DPI Block Diagram
 ├── docs/
 │   ├── BLUEPRINT_RUANG_BAHASA_ID.md           # Full Technical Blueprint (Indonesian, 606 lines)
 │   └── ARCHITECTURE_OVERVIEW_EN.md            # Comprehensive Architecture Specification (English)
@@ -113,7 +114,7 @@ ruang-bahasa/
 │   └── knowledge_release.schema.json          # JSON Schema for Curated Knowledge Releases
 └── examples/
     └── sample_knowledge_release_madurese_demo.json # Sample verification dataset (Madurese demo)
-`
+```
 
 ---
 
